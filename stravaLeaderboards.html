@@ -1,0 +1,16 @@
+<div ng-controller="stravaLeaderboardsCtrl" class="strava-leaderboards-widget" ng-class="{'club-run': widget.data.type == 'Run', 'club-ride': widget.data.type == 'Ride'}" set-ng-animate="false">
+    <ul class="athletes-list">
+        <li ng-repeat="item in items" class="strava-athlete">
+            <div>
+                <span class="athlete-info">
+                    <span class="place">{{ $index+1 }}</span>
+                    <img ng-src="{{ item.athlete.avatar }}" class="avatar img-circle"/>
+                </span>
+                <span class="athlete-name">{{ item.athlete.name }}</span>
+
+                <span class="distance">{{ item.distance }} km</span>
+                <span class="distance">{{ item.average }} {{ item.average_metric }}</span>
+            </div>
+        </li>
+    </ul>
+</div>

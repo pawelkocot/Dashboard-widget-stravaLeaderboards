@@ -6,6 +6,6 @@ angular.module('widget')
             $scope.items = [];
             $timeout(function() {
                 $scope.items = data.leaderboard.slice(0, 3);
-            }, 550);
+            }, 1000);
         }
     }]);
